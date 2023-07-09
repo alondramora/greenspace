@@ -31,7 +31,7 @@ app.get("/spaces", async (req, res) => {
 //create a new space document and save to DB
 app.post("/spaces", async (req, res) => {
   console.log(req.body); // this was so that we could see the data being sent in insomnia
-  res.send(req.body); // this was so that we could see the data being sent in insomnia
+  //   res.send(req.body); // this was so that we could see the data being sent in insomnia
   try {
     const space = await Space.create(req.body); // creates a new variable to store the new "space"
     res.status(200).json(space); // response is a status 200 and sends the space data in json format
