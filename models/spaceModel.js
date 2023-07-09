@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Url = require("mongoose-type-url");
 
 const spaceSchema = mongoose.Schema(
   {
@@ -6,6 +7,7 @@ const spaceSchema = mongoose.Schema(
     location: String,
     description: String,
     image: String,
+    website: Url,
   },
   {
     timestamps: true,

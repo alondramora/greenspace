@@ -18,13 +18,23 @@ app.get("/", (req, res) => {
   res.send("Green Space Homepage"); // this route gets us the home page
 });
 
+app.get("/spaces", async (req, res) => {
+  try {
+    const allSpaces = await Space.find({}); // find all spaces in db
+    console.log(allSpaces);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ message: error.message });
+  }
+});
+
 //create a new space document and save to DB
 app.post("/spaces", async (req, res) => {
-  //   console.log(req.body); // this was so that we could see the data being sent in insomnia
-  //   res.send(req.body); // this was so that we could see the data being sent in insomnia
+  console.log(req.body); // this was so that we could see the data being sent in insomnia
+  res.send(req.body); // this was so that we could see the data being sent in insomnia
   try {
-    const space = await Space.create(req.body); // creates a new variable to store the new "product" and saves to db
-    res.status(200).json(space); // response is a status 200 and the product data in json format
+    const space = await Space.create(req.body); // creates a new variable to store the new "space"
+    res.status(200).json(space); // response is a status 200 and sends the space data in json format
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ message: error.message });
