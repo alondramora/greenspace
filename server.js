@@ -18,9 +18,11 @@ app.get("/", (req, res) => {
   res.send("Green Space Homepage"); // this route gets us the home page
 });
 
+// GET all spaces
 app.get("/spaces", async (req, res) => {
   try {
     const allSpaces = await Space.find({}); // find all spaces in db
+    res.status(200).json(allSpaces);
     console.log(allSpaces);
   } catch (error) {
     console.log(error.message);
