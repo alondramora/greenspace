@@ -22,8 +22,20 @@ app.get("/", (req, res) => {
 app.get("/spaces", async (req, res) => {
   try {
     const allSpaces = await Space.find({}); // find all spaces in db
-    res.status(200).json(allSpaces);
     console.log(allSpaces);
+    res.status(200).json(allSpaces);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//GET one specific space using it's id
+app.get("/spaces/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const space = await Space.findById(id);
+    res.status(200).json(space);
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ message: error.message });
