@@ -14,8 +14,12 @@ require("dotenv").config({ path: "./config/.env" });
 connectDB();
 
 // routes
+// app.get("/", (req, res) => {
+//   res.send("Green Space Homepage"); // this route gets us the home page
+// });
+
 app.get("/", (req, res) => {
-  res.send("Green Space Homepage"); // this route gets us the home page
+  res.sendFile(__dirname + "/index.html");
 });
 
 // GET all spaces
