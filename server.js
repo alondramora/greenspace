@@ -7,6 +7,8 @@ const Space = require("./models/spaceModel");
 //middleware
 app.use(express.json()); // this express middleware is so that our app can understand json data type
 
+app.use(express.static("public"));
+
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 
