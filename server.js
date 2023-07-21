@@ -20,8 +20,14 @@ connectDB();
 //   res.send("Green Space Homepage"); // this route gets us the home page
 // });
 
+//get home page
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
+});
+
+// get about page
+app.get("/about", (req, res) => {
+  res.sendFile(__dirname + "/about.html");
 });
 
 // GET all spaces
