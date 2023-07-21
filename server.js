@@ -25,6 +25,10 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/home", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
 // get about page
 app.get("/about", (req, res) => {
   res.sendFile(__dirname + "/about.html");
