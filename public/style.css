@@ -27,11 +27,13 @@ body {
   padding: 30px 0;
 }
 
-.wrapper .sidebar h2 {
+.wrapper .sidebar .sidebar-title {
   color: white;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 20px;
+  line-height: 30px;
 }
 
 .wrapper .sidebar ul li {
@@ -69,4 +71,15 @@ body {
 
 .wrapper .main-content .info div {
   margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 50px;
+}
+
+.leaf-logo {
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: auto;
 }

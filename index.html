@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Space</title>
+    <title>Green Space API</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="sidebar">
-        <h2>Green Space API</h2>
+        <img
+          class="leaf-logo"
+          src="/images/leaf-svgrepo-com.svg"
+          alt="A tree leaf"
+        />
+        <h2 class="sidebar-title">The Green Space API</h2>
         <ul>
           <li><a href="#">About</a></li>
           <li><a href="#">Documentation</a></li>
@@ -27,34 +32,27 @@
         <div class="info">
           <div>
             <h3>
-              Maybe you decided you need a little nature in your life on a whim,
-              or you don't have the time to do a full on hike at the moment.
-              Find urban green spaces in your area using the Green Space API.
+              Need a little nature in your life on a whim? Don't have the time
+              to do a full on hike at the moment? Find a collection of urban
+              green spaces in your area using the Green Space API.
             </h3>
           </div>
+
           <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
-            asperiores possimus iure error quia quisquam consectetur repellat
-            natus? Nesciunt amet necessitatibus quis! Laudantium, officia iste
-            excepturi eaque inventore incidunt voluptatem iusto, maiores facilis
-            ducimus id, consectetur vitae voluptates fugit quas tempore unde!
-            Delectus odit, hic dolorum illo veniam sed doloribus impedit a
-            quibusdam, error labore animi dolore quas, laboriosam vel veritatis
-            numquam ducimus harum laudantium totam! Fugit cupiditate,
-            consequuntur, veritatis reprehenderit ipsam accusantium sint eius
-            neque magnam, ab nobis exercitationem.
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
-            asperiores possimus iure error quia quisquam consectetur repellat
-            natus? Nesciunt amet necessitatibus quis! Laudantium, officia iste
-            excepturi eaque inventore incidunt voluptatem iusto, maiores facilis
-            ducimus id, consectetur vitae voluptates fugit quas tempore unde!
-            Delectus odit, hic dolorum illo veniam sed doloribus impedit a
-            quibusdam, error labore animi dolore quas, laboriosam vel veritatis
-            numquam ducimus harum laudantium totam! Fugit cupiditate,
-            consequuntur, veritatis reprehenderit ipsam accusantium sint eius
-            neque magnam, ab nobis exercitationem.
+            <h2>JSON</h2>
+            <pre>
+              { 
+                "_id": "64ab3f9b2b50806d8e80c200", 
+                "name": "Whipple Creek Regional Park", 
+                "location": "Ridgefield, Washington",
+                "description": "This 300-acre regional park is located off Northwest 179th Street west of the Clark County Fairgrounds. The park's primary feature is 4.3 miles of trails that cater to hikers
+                  and horseback riders alike.", 
+                "website": "https://clark.wa.gov/public-works/whipple-creek-regional-park",
+                "createdAt": "2023-07-09T23:15:39.858Z", 
+                "updatedAt": "2023-07-09T23:15:39.858Z", 
+                "__v": 0 
+              }
+            </pre>
           </div>
           <div>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
