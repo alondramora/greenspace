@@ -54,7 +54,7 @@ body {
 
 .wrapper .main-content {
   width: 100%;
-  margin-left: 200px;
+  margin-left: 14rem;
 }
 
 /* .wrapper .main-content .header {
@@ -76,6 +76,7 @@ body {
 
 h3 {
   margin-top: 50px;
+  font-size: 1.5rem;
 }
 
 .leaf-logo {

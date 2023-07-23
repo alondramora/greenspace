@@ -29,7 +29,7 @@ app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-// get about page
+// get docs page
 app.get("/docs", (req, res) => {
   res.sendFile(__dirname + "/docs.html");
 });
