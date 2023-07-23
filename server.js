@@ -30,8 +30,8 @@ app.get("/home", (req, res) => {
 });
 
 // get about page
-app.get("/about", (req, res) => {
-  res.sendFile(__dirname + "/about.html");
+app.get("/docs", (req, res) => {
+  res.sendFile(__dirname + "/docs.html");
 });
 
 // GET all spaces
