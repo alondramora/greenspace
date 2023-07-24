@@ -14,6 +14,10 @@ body {
   background: #f3f5f9;
 }
 
+h2 {
+  margin: 1rem 0 0.8rem;
+}
+
 /* sidebar nav */
 .wrapper {
   display: flex;
@@ -55,6 +59,7 @@ body {
 .wrapper .main-content {
   width: 100%;
   margin-left: 14rem;
+  margin-right: 20rem;
 }
 
 /* .wrapper .main-content .header {
@@ -84,4 +89,28 @@ h3 {
   width: 100px;
   display: block;
   margin: auto;
+}
+
+/* docs page */
+.docs-title {
+  margin-top: 6rem;
+  font-size: 2rem;
+}
+
+span {
+  display: block;
+}
+
+.code {
+  background-color: lightgray;
+  padding: 0.5rem 1rem;
+  width: 230px;
+  border-radius: 6px;
+}
+
+pre {
+  background-color: lightgray;
+  overflow-x: auto;
+  padding: 1rem 2rem;
+  border-radius: 6px;
 }

@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- side bar -->
       <div class="sidebar">
         <img
           class="leaf-logo"
@@ -19,9 +20,60 @@
         <ul>
           <li><a href="/home">Home</a></li>
           <li><a href="/docs">Documentation</a></li>
-          <li><a href="https://github.com/alondramora/greenspace">Github Repo</a></li>
+          <li>
+            <a href="https://github.com/alondramora/greenspace">Github Repo</a>
+          </li>
           <li><a href="#">Placeholder</a></li>
         </ul>
-            
-    </body>
-        </html>
+      </div>
+      <!-- end of sidebar-->
+      <div class="main-content">
+        <div class="info">
+          <div>
+            <h1 class="docs-title">Endpoints</h1>
+          </div>
+          <div>
+            <h2>List All Spaces</h2>
+            <span class="code"> http://localhost:3001/spaces </span>
+          </div>
+          <div>
+            <h2>JSON</h2>
+            <pre>
+  [
+	{
+		"_id": "64aa4275b4fed12c2eb898ec",
+		"name": "Fort Vancouver National Historic Site",
+		"location": "Vancouver, Washington",
+		"description": "Huge community park with rich history behind it...",
+		"createdAt": "2023-07-09T05:15:33.105Z",
+		"updatedAt": "2023-07-09T05:15:33.105Z",
+		"__v": 0
+	},
+	{
+		"_id": "64ab3f9b2b50806d8e80c200",
+		"name": "Whipple Creek Regional Park",
+		"location": "Ridgefield, Washington",
+		"description": "This 300-acre regional park is located off Northwest...",
+		"website": "https://clark.wa.gov/public-works/whipple-creek-regional-park",
+		"createdAt": "2023-07-09T23:15:39.858Z",
+		"updatedAt": "2023-07-09T23:15:39.858Z",
+		"__v": 0
+	},
+	{
+		"_id": "64ab41810bf92f85ff0d613e",
+		"name": "Frenchman's Bar Regional Park",
+		"location": "Vancouver, Washington",
+		"description": "This lush 120-acre regional park is located on the Columbia River...",
+		"website": "https://clark.wa.gov/public-works/frenchmans-bar-regional-park",
+		"createdAt": "2023-07-09T23:23:45.608Z",
+		"updatedAt": "2023-07-09T23:23:45.608Z",
+		"__v": 0
+	}
+  ]
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
