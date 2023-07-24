@@ -92,9 +92,10 @@ h3 {
 }
 
 /* docs page */
+
 .docs-title {
+  font-size: 1.6rem;
   margin-top: 6rem;
-  font-size: 2rem;
 }
 
 span {
