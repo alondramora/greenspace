@@ -105,8 +105,9 @@ span {
 .code {
   background-color: lightgray;
   padding: 0.5rem 1rem;
-  width: 230px;
+  width: min-content;
   border-radius: 6px;
+  overflow-x: auto;
 }
 
 pre {

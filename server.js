@@ -61,12 +61,31 @@ app.get("/spaces/:id", async (req, res) => {
 //create a new space document and save to DB
 app.post("/spaces", async (req, res) => {
   console.log(req.body); // this was so that we could see the data being sent in insomnia
-  //   res.send(req.body); // this was so that we could see the data being sent in insomnia
   try {
     const space = await Space.create(req.body); // creates a new variable to store the new "space"
     res.status(200).json(space); // response is a status 200 and sends the space data in json format
   } catch (error) {
     console.log(error.message);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// update a space
+
+//delete a space
+app.delete("/spaces/:id", async (req, res) => {
+  try {
+    const { id } = req.params; // using destructuring to grab the id from the route params
+    const space = await Space.findByIdAndDelete(id);
+    console.log("space successfully deleted");
+    if (!space) {
+      return res
+        .status(404)
+        .json({ message: `cannot find any space with id ${id}` });
+    }
+    res.status(200).json(space);
+    res.status(500).json({ message: error.message });
+  } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
