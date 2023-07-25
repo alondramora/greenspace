@@ -15,12 +15,9 @@ require("dotenv").config({ path: "./config/.env" });
 //connect to the DB
 connectDB();
 
-// routes
-// app.get("/", (req, res) => {
-//   res.send("Green Space Homepage"); // this route gets us the home page
-// });
+//Routes
 
-//get home page
+//GET home page
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
@@ -29,7 +26,7 @@ app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-// get docs page
+// GET docs page
 app.get("/docs", (req, res) => {
   res.sendFile(__dirname + "/docs.html");
 });
@@ -58,7 +55,7 @@ app.get("/spaces/:id", async (req, res) => {
   }
 });
 
-//create a new space document and save to DB
+//POST/create a new space document and save to DB
 app.post("/spaces", async (req, res) => {
   console.log(req.body); // this was so that we could see the data being sent in insomnia
   try {
@@ -70,9 +67,26 @@ app.post("/spaces", async (req, res) => {
   }
 });
 
-// update a space
+//PUT/update a space
+app.put("/spaces/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const space = await Space.findByIdAndUpdate(id, req.body);
+    if (!space) {
+      // if we cannot find space in DB
+      return res
+        .status(404)
+        .json({ message: `cannot find any space with ID ${id}` });
+    }
+    const updatedSpace = await Space.findById(id);
+    res.status(200).json(updatedSpace);
+    console.log("Space updated successfully.");
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
-//delete a space
+//DELETE a space
 app.delete("/spaces/:id", async (req, res) => {
   try {
     const { id } = req.params; // using destructuring to grab the id from the route params
