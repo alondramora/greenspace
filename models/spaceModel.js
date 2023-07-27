@@ -8,6 +8,7 @@ const spaceSchema = mongoose.Schema(
     description: String,
     image: String,
     website: Url,
+    googleMapLocation: Url,
   },
   {
     timestamps: true,
