@@ -118,5 +118,5 @@ pre {
 }
 
 #googleMapsLocationImage {
-  display: block;
+  display: flex;
 }

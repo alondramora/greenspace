@@ -31,6 +31,11 @@ app.get("/docs", (req, res) => {
   res.sendFile(__dirname + "/docs.html");
 });
 
+// GET docs page
+app.get("/spaces", (req, res) => {
+  res.sendFile(__dirname + "/spaces.html");
+});
+
 // GET all spaces
 app.get("/spaces", async (req, res) => {
   try {
