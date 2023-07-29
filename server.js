@@ -37,7 +37,7 @@ app.get("/spaces", (req, res) => {
 });
 
 // GET all spaces
-app.get("/spaces", async (req, res) => {
+app.get("/getAllSpaces", async (req, res) => {
   try {
     const allSpaces = await Space.find({}); // find all spaces in db
     console.log(allSpaces);
