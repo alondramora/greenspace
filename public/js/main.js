@@ -15,10 +15,8 @@ async function storeSpacesInArrayAndAddtoDom() {
       // create an h2 for each document that grabs the document.name
       return x.name;
     });
-    //logs the names of all the documents in the array
-    // console.log(greenSpaceNames);
 
-    // spaceNames takes each element in the greenSpaceNames array and creates an h2 element in the html of the spaces page for each one, they each have a class name of space-names
+    // spaceNamesH2 takes each element in the greenSpaceNames array and creates an h2 element in the html of the spaces page for each one, they each have a class name of space-names
     let spaceNamesH2 = greenSpaceNames.map((x) => {
       const createH2 = document.createElement("h2");
       createH2.classList.add("space-name");
@@ -26,7 +24,6 @@ async function storeSpacesInArrayAndAddtoDom() {
       document.body.appendChild(createH2);
       console.log(`${x} now has an h2!`);
     });
-    spaceNamesH2();
 
     // const greenSpaceImages = await greenSpaceDocumentJson.map((x) => {
     //   return x.googleMapLocation;
