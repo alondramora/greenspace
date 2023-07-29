@@ -16,23 +16,19 @@ async function fetchGoogleMapsLocationImage(id) {
       throw new Error("Network response not ok.");
     }
     // if the response is ok then...
-    // response = response + id;
     const location = await response.json();
-    // console.log(location);
     document.getElementById("googleMapsLocationImage").src =
       location.googleMapLocation; // grab the img tag with the id of "googleMapsLocationImage" and update the src so that it links to the googleMapLocation (url) field of the document
   } catch (error) {
     console.error("Error fetching Google Map location:", error);
-    // You can choose to re-throw the error or handle it differently
     throw error;
   }
 }
 
-(async () => {
+window.addEventListener("DOMContentLoaded", async () => {
   try {
-    await fetchGoogleMapsLocationImage("64bf43a0a6e214f3435df46f"); // not sure if the argument is working at all
+    await fetchGoogleMapsLocationImage("64bf43a0a6e214f3435df46f");
   } catch (error) {
-    // Handle any errors that may occur during the fetch or image update
     console.error("Error:", error);
   }
-})();
+});
