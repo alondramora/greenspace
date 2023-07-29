@@ -9,7 +9,7 @@ async function storeSpacesInArrayAndAddtoDom() {
   // ensures we get the JSON from the fetch promise
   const greenSpaceDocumentJson = await greenSpaceCollection.json();
   // storing the names of the documents in an array called greenSpaceNames
-  const greenSpaceNames = greenSpaceDocumentJson.map((x) => {
+  const greenSpaceNames = await greenSpaceDocumentJson.map((x) => {
     // create an h2 for each document that grabs the document.name
     return x.name;
   });
