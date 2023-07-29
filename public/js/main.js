@@ -17,6 +17,9 @@ async function storeSpacesInArrayAndAddtoDom() {
     });
     //logs the names of all the documents in the array
     console.log(greenSpaceNames);
+    const greenSpaceImages = await greenSpaceDocumentJson.map((x) => {
+      return x.googleMapLocation;
+    });
   }
 }
 storeSpacesInArrayAndAddtoDom();
