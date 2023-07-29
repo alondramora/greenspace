@@ -2,19 +2,22 @@
 
 //stores the array of my green spaces in the greenSpaceCollection variable
 async function storeSpacesInArrayAndAddtoDom() {
-  //stores the array in a variable
-  const greenSpaceCollection = await fetch(
-    "http://localhost:3001/getAllSpaces"
-  );
-  // ensures we get the JSON from the fetch promise
-  const greenSpaceDocumentJson = await greenSpaceCollection.json();
-  // storing the names of the documents in an array called greenSpaceNames
-  const greenSpaceNames = await greenSpaceDocumentJson.map((x) => {
-    // create an h2 for each document that grabs the document.name
-    return x.name;
-  });
-  //logs the names of all the documents in the array
-  console.log(greenSpaceNames);
+  // code will only run if we are on the /spaces page
+  if (window.location.pathname == "/spaces") {
+    //stores the array in a variable
+    const greenSpaceCollection = await fetch(
+      "http://localhost:3001/getAllSpaces"
+    );
+    // ensures we get the JSON from the fetch promise
+    const greenSpaceDocumentJson = await greenSpaceCollection.json();
+    // storing the names of the documents in an array called greenSpaceNames
+    const greenSpaceNames = await greenSpaceDocumentJson.map((x) => {
+      // create an h2 for each document that grabs the document.name
+      return x.name;
+    });
+    //logs the names of all the documents in the array
+    console.log(greenSpaceNames);
+  }
 }
 storeSpacesInArrayAndAddtoDom();
 
