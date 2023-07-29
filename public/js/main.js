@@ -16,7 +16,18 @@ async function storeSpacesInArrayAndAddtoDom() {
       return x.name;
     });
     //logs the names of all the documents in the array
-    console.log(greenSpaceNames);
+    // console.log(greenSpaceNames);
+
+    // spaceNames takes each element in the greenSpaceNames array and creates an h2 element in the html of the spaces page, they each have a class name of space-names
+    let spaceNames = greenSpaceNames.map((x) => {
+      const h2ContainsName = document.createElement("h2");
+      h2ContainsName.classList.add("space-name");
+      h2ContainsName.innerHTML = x;
+      document.body.appendChild(h2ContainsName);
+      console.log(`${x} now has an h2!`);
+    });
+    spaceNames();
+
     const greenSpaceImages = await greenSpaceDocumentJson.map((x) => {
       return x.googleMapLocation;
     });
@@ -52,12 +63,3 @@ storeSpacesInArrayAndAddtoDom();
 //   }
 // });
 //////////////////////////
-
-//fetches the googleMapLocation from a specific document in my collection
-// fetch("http://localhost:3001/spaces/64bf43a0a6e214f3435df46f")
-//   .then((response) => response.json())
-//   .then((location) => {
-//     document.getElementById("googleMapsLocationImage").src =
-//       location.googleMapLocation;
-//   });
-////////////////////////
