@@ -124,3 +124,7 @@ pre {
 .space-name {
   margin-left: 14rem;
 }
+
+.location-image {
+  display: block;
+}
