@@ -128,3 +128,10 @@ pre {
 .location-image {
   display: block;
 }
+
+/******** MEDIA QUERIES ***********/
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+}

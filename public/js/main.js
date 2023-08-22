@@ -21,7 +21,9 @@ async function listSpacesAndImages() {
       const createH2 = document.createElement("h2");
       createH2.classList.add("space-name");
       createH2.innerHTML = spaceName;
-      document.body.appendChild(createH2);
+      // document.body.appendChild(createH2);
+      let parentDiv = document.querySelector(".space-container");
+      parentDiv.appendChild(createH2);
       console.log(`${spaceName} now has an h2!`);
       // creates an img element
       const createImg = document.createElement("img");
