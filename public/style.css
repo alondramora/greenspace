@@ -122,7 +122,8 @@ pre {
 } */
 
 .space-name {
-  margin-left: 14rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .location-image {
@@ -133,5 +134,10 @@ pre {
 @media screen and (max-width: 1000px) {
   .sidebar {
     display: none;
+  }
+  .wrapper .main-content {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
